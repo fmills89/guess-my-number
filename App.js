@@ -13,25 +13,30 @@ export default function App() {
   const [userNumber, setUserNumber] = useState();
   const [gameIsOver, setGameIsOver] = useState(true);
 
+  // importing fonts
   const [fontsLoaded] = useFonts({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
     'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
   });
 
-  //once fonts loaded will not show splash screen
+  // once fonts loaded will not show splash screen
   if (!fontsLoaded) {
     return <AppLoading />
   }
 
+  // takes user pickedNumber as argument - passes to setUserNumber state and setGameIsOver
+  // to false until true
   function pickedNumberHandler(pickedNumber) {
     setUserNumber(pickedNumber);
     setGameIsOver(false);
   }
 
+  // setGameIsOver to true to switch screens to gaveoverscreen
   function gameOverHandler() {
     setGameIsOver(true);
   }
 
+  // changing screen once user has picked a number
   let screen = <StartGameScreen onPickNumber={pickedNumberHandler} />
 
   if (userNumber) {
