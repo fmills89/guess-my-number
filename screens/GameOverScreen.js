@@ -1,4 +1,4 @@
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
 function GameOverScreen() {
     return (
@@ -6,4 +6,8 @@ function GameOverScreen() {
     )
 }
 
-export default GameOverScreen
+export default GameOverScreen;
+
+const styles = StyleSheet.create({
+    
+})
