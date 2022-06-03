@@ -33,8 +33,9 @@ export default function App() {
   }
 
   // setGameIsOver to true to switch screens to gaveoverscreen
-  function gameOverHandler() {
+  function gameOverHandler(numberOfRounds) {
     setGameIsOver(true);
+    setGuessRounds(numberOfRounds);
   }
 
   // function will run when start new game button is clicked
