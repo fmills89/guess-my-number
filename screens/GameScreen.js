@@ -7,7 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Title from '../components/ui/Title';
 import InstructionText from '../components/ui/InstructionText';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+
 import GuessLogItem from '../components/game/GuessLogItem';
 
 function generateRandomBetween(min, max, exclude) {
@@ -102,6 +102,7 @@ const styles = StyleSheet.create({
     screen: {
         flex: 1,
         padding: 24,
+        alignItems: 'center'
 
     },
     instructionText: {
